@@ -3,6 +3,7 @@ function handler(req, res) {
     const data = req.body;
 
     const { title, image, address, description } = data;
+    //add mongoDB code here
   }
 }
 
