@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useEffect, useState } from "react";
 import MeetupList from "../components/meetups/MeetupList";
 
@@ -25,7 +26,15 @@ function HomePage(props) {
 
   useEffect(() => {}, []);
 
-  return <MeetupList meetups={props.meetups} />;
+  return (
+    <>
+      <Head>
+        <title>NEXTJS TEST</title>
+        <meta name="description" content="NextJS Test" />
+      </Head>
+      <MeetupList meetups={props.meetups} />;
+    </>
+  );
 }
 
 // export async function getServerSideProps(context) {
